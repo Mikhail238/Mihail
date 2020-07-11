@@ -39,17 +39,3 @@ else
 }
 return 0;
 }
-
-ifstream TABLICAexelARDUINO("C:\\Users\\Кузины\\Desktop\\LBU проект.txt");
-if (!TABLICAexelARDUINO.is_open()) // если файл не открыт
-cout << "Файл 1 не может быть открыт!\n"; // сообщить об этом
-else
-{
-	while (!TABLICAexelARDUINO.eof()) {
-		TABLICAexelARDUINO.getline(SpisocKodov, 2000, ';');
-	}
-	TABLICAexelARDUINO.close();
-	cout << '\n\n\n\n' << SpisocKodov;
-}
-return 0;
-}
