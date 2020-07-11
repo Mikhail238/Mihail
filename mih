@@ -11,6 +11,8 @@ int main()
 	setlocale(LC_ALL, "Rus");
 	char tablica[2000];
 	char SpisocKodov[500];
+
+
 ifstream TABLICAexel("C:\\Users\\Кузины\\Desktop\\LBU проект.txt");
 if (!TABLICAexel.is_open()) // если файл не открыт
 cout << "Файл 1 не может быть открыт!\n"; // сообщить об этом
@@ -20,8 +22,24 @@ else
 		TABLICAexel.getline(tablica, 2000, ';');
 	}
 	TABLICAexel.close();
-		cout << tablica;
+		cout << tablica <<endl  ;
 }
+
+
+ifstream TABLICAexelARDUINO("C:\\Users\\Кузины\\Desktop\\ARDUINO.txt");
+if (!TABLICAexelARDUINO.is_open()) // если файл не открыт
+cout << "Файл 2 не может быть открыт!\n"; // сообщить об этом
+else
+{
+	while (!TABLICAexelARDUINO.eof()) {
+		TABLICAexelARDUINO.getline(SpisocKodov, 2000, '\n');
+	}
+	TABLICAexelARDUINO.close();
+	cout << SpisocKodov;
+}
+return 0;
+}
+
 ifstream TABLICAexelARDUINO("C:\\Users\\Кузины\\Desktop\\LBU проект.txt");
 if (!TABLICAexelARDUINO.is_open()) // если файл не открыт
 cout << "Файл 1 не может быть открыт!\n"; // сообщить об этом
