@@ -1,0 +1,37 @@
+#define _CRT_SECURE_NO_WARNINGS 
+#include<iostream>
+#include<fstream>
+#include<ctime>
+#include<string>
+using namespace std;
+
+int main()
+{
+	cout << "Hello World\n";
+	setlocale(LC_ALL, "Rus");
+	char tablica[2000];
+	char SpisocKodov[500];
+ifstream TABLICAexel("C:\\Users\\Кузины\\Desktop\\LBU проект.txt");
+if (!TABLICAexel.is_open()) // если файл не открыт
+cout << "Файл 1 не может быть открыт!\n"; // сообщить об этом
+else
+{
+	while (!TABLICAexel.eof()) {
+		TABLICAexel.getline(tablica, 2000, ';');
+	}
+	TABLICAexel.close();
+		cout << tablica;
+}
+ifstream TABLICAexelARDUINO("C:\\Users\\Кузины\\Desktop\\LBU проект.txt");
+if (!TABLICAexelARDUINO.is_open()) // если файл не открыт
+cout << "Файл 1 не может быть открыт!\n"; // сообщить об этом
+else
+{
+	while (!TABLICAexelARDUINO.eof()) {
+		TABLICAexelARDUINO.getline(SpisocKodov, 2000, ';');
+	}
+	TABLICAexelARDUINO.close();
+	cout << '\n\n\n\n' << SpisocKodov;
+}
+return 0;
+}
